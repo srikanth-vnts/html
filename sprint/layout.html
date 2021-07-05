@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<head>
+    <style type="text/css">
+        #parent {
+            width: 60%;
+            height: auto;
+            margin: auto;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        @media (min-width:400px){
+            #layer2{
+                 grid-template: "a a"
+                                "b b"
+                                "c c"
+                                "d d"
+                                "e e"
+                                "f f"
+                                "g g" !important;
+            }
+        }
+        @media (min-width:720px){
+            #layer2{
+                 grid-template: "a a a a"
+                                "b b c c"
+                                "d d e e"
+                                "f f g g" !important;
+            }
+        }
+        @media (min-width:1200px){
+            #layer2{
+                 grid-template: "a a a a a a"
+                                "b b c c d d"
+                                "e e f f g g" !important;
+            }
+        }
+
+        .layer1 {
+            width: 95%;
+            height: 400px;
+            margin: auto;
+        }
+
+        .layer1_box {
+            display:flex;
+            height: 250px;
+            flex-basis:1;
+            flex-direction:row !important;
+            float: left;
+            margin-top: 30px;
+            margin-left: 15px;
+            overflow-x:hidden;
+            overflow: hidden;
+
+        }
+
+        .layer1 h5,
+        h2 {
+            margin: auto;
+            text-align: center;
+
+        }
+
+        .layer1 h5 {
+            color: rgb(255, 94, 0);
+        }
+
+        span {
+            color: gray !important;
+            text-align: left !important;
+            background-color:white !important;
+            margin: 0px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .layer1 >h4 {
+            margin: 0px;
+            font-weight: 500;
+            
+        }
+
+        .layer1>p {
+            float: left;
+            height: 20px;
+            width: 100px;
+            padding: 5px;
+            margin-left: 44%;
+            font-size: 12px;
+            background-color: rgb(255, 94, 0);
+            color: aliceblue;
+            text-align: center;
+        }
+
+        #layer2{
+            display: grid;
+            padding:10px;
+            margin:auto;
+            grid-gap: 10px;
+            grid-template-columns: auto;
+            grid-template-rows: auto;
+            grid-template: "a a a a a a"
+                           "b b c c d d"
+                           "e e f f g g";
+        }
+        .layer2_box1{
+            grid-area: a;
+            text-align: center;
+        }
+        .layer2_box1 h5{
+            padding:0px !important;
+            margin:0px;
+        }
+        .layer2_box1 p{
+            color:gray;
+            font-size: 14px;
+        }
+        .layer2_box2{
+            
+            width:270px;
+            height:90px;
+            text-align: left;
+            float:left !important;
+        }
+        .layer2_box2_1{
+            grid-area: b;
+        }
+        .layer2_box2_2{
+            grid-area: c;
+        }
+        .layer2_box2_3{
+            grid-area: d;
+        }
+        .layer2_box2_4{
+            grid-area: e;
+        }
+        .layer2_box2_5{
+            grid-area: f;
+        }
+        .layer2_box2_g{
+            grid-area: g;
+        }
+        .layer2_box2 > img{
+            float:left;
+        }
+        .layer2_box2 h5{
+            float:left;
+            padding:0px;
+            margin:0px;
+            margin-left:2px;
+        }
+        .layer2_box2 p{
+            font-size:12px;
+            color: gray;
+            margin-left:55px;
+            margin-top: -25px;
+            padding:0px;
+            text-align:left;
+            float:left;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id="parent">
+        <div class="layer1">
+            <h5>NEWS & UPDATE</h5>
+            <h2>Our Blog Posts</h2>
+            <div class="layer1_box">
+                <div class="layer1">
+                    <img src="https://via.placeholder.com/270x200" />
+                    <span>29, January 2019</span>
+                    <h4>Architectural Art Mordern</h4>
+                </div>
+                <div class="layer1">
+                    <img src="https://via.placeholder.com/270x200" />
+                    <span>29, January 2019</span>
+                    <h4>Architectural Art Mordern</h4>
+                </div>
+                <div class="layer1">
+                    <img src="https://via.placeholder.com/270x200" />
+                    <span>29, January 2019</span>
+                    <h4>Architectural Art Mordern</h4>
+                </div>
+            </div>
+            <p>View All Posts</p>
+        </div>
+        <div id="layer2">
+            <div class="layer2_box1">
+                <h5>NEWS & UPDATE</h5>
+                <h2>Our Blog Posts</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna<br>
+                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+        </div>
+        <div class="layer2_box2 layer2_box2_1">
+            <img src="https://via.placeholder.com/50x50" />
+            <h5>Innovative Structure</h5>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</p>
+        </div>
+        <div class="layer2_box2 layer2_box2_2">
+            <img src="https://via.placeholder.com/50x50" />
+            <h5>Innovative Structure</h5>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</p>
+        </div>
+        <div class="layer2_box2 layer2_box2_3">
+            <img src="https://via.placeholder.com/50x50" />
+            <h5>Innovative Structure</h5>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</p>
+        </div>
+        <div class="layer2_box2 layer2_box2_4">
+            <img src="https://via.placeholder.com/50x50" />
+            <h5>Innovative Structure</h5>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</p>
+        </div>
+        <div class="layer2_box2 layer2_box2_5">
+            <img src="https://via.placeholder.com/50x50" />
+            <h5>Innovative Structure</h5>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</p>
+        </div>
+        <div class="layer2_box2 layer2_box2_6">
+            <img src="https://via.placeholder.com/50x50" />
+            <h5>Innovative Structure</h5>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</p>
+        </div>
+        </div>
+    </div>
+</body>
